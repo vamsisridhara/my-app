@@ -1,0 +1,34 @@
+<div class="container" *ngIf="employees?.length">
+  <div class="container-fluid">
+    <table class="table table-bordered">
+      <tr>
+        <th>
+          Employee Id
+        </th>
+        <th>
+          Employee Name
+        </th>
+        <th>
+          Salary
+        </th>
+        <th>
+          Age
+        </th>
+      </tr>
+      <tr *ngFor="let e of employees">
+        <td>
+          {{ e.id }}
+        </td>
+        <td>
+          {{ e.employee_name }}
+        </td>
+        <td>
+          {{ e.employee_salary }}
+        </td>
+        <td>
+          {{ e.employee_age }}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

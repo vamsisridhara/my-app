@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  prodURL: 'local - url'
+  prodURL: 'qa - url'
 };
 
 /*
