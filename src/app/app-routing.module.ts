@@ -1,3 +1,4 @@
+import { CustomPipesComponent } from './components/custom-pipes/custom-pipes.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,6 +12,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { NotfoundPageComponent } from './pages/notfound-page/notfound-page.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { DataBindingComponent } from './forms/data-binding/data-binding.component';
+import { DemoPipesComponent } from './pages/demo-pipes/demo-pipes.component';
+import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
+import { FlyingHeroesPipe } from './pipes/flying-heroes.pipe';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -19,6 +23,7 @@ const appRoutes: Routes = [
   { path: 'template-driven', component: TemplateDrivenComponent },
   { path: 'reactive-forms', component: ReactiveFormsComponent },
   { path: 'data-binding', component: DataBindingComponent },
+  { path: 'demo-pipes', component: DemoPipesComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
 ];
@@ -34,6 +39,7 @@ const appRoutes: Routes = [
     )
   ],
   declarations: [
+    CustomPipesComponent,
     DataBindingComponent,
     EmployeeComponent,
     ProductsComponent,
@@ -43,6 +49,9 @@ const appRoutes: Routes = [
     TemplateDrivenComponent,
     ReactiveFormsComponent,
     NotfoundPageComponent,
+    DemoPipesComponent,
+    ExponentialStrengthPipe,
+    FlyingHeroesPipe
   ]
 })
 export class AppRoutingModule {

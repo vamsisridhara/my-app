@@ -1,0 +1,39 @@
+<div class="container jumbotron">
+  <div class="container-fluid">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-8">
+          New hero:
+          <input type="text" #box (keyup.enter)="addHero(box.value); box.value=''" placeholder="hero name" />
+          <button (click)="reset()">Reset</button>
+          <div *ngFor="let hero of heroes">
+            {{hero.name}}
+          </div>
+        </div>
+      </div>
+      <div>
+        <div *ngFor="let hero of (heroes | flyingHeroes)">
+          {{hero.name}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Power Boost Calculator</h2>
+          <div>Normal power: <input [(ngModel)]="power"></div>
+          <div>Boost factor: <input [(ngModel)]="factor"></div>
+          <p>
+            Super Hero Power: {{power | exponentialStrength: factor}}
+          </p>
+        </div>
+        <div class="col-md-8">
+          The chained hero's birthday is
+          {{  birthday | date:'fullDate' | uppercase}}
+          <p>The hero's birthday is {{ birthday | date:format }}</p>
+          <button (click)="toggleFormat()">Toggle Format</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

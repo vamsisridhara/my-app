@@ -10,12 +10,16 @@ import { from } from 'rxjs';
 
 import { ProductRoutingModule } from './routing/product-routing/product-routing.module';
 import { EmployeeRoutingModule } from './routing/employee-routing/employee-routing.module';
+// import { CustomPipesComponent } from './components/custom-pipes/custom-pipes.component';
+// import { DemoPipesComponent } from './pages/demo-pipes/demo-pipes.component';
 // import { DataBindingComponent } from './forms/data-binding/data-binding.component';
 // import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    // CustomPipesComponent,
+    // DemoPipesComponent,
     // DataBindingComponent,
     // ReactiveFormsComponent,
   ],
