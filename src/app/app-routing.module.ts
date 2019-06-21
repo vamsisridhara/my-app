@@ -15,7 +15,7 @@ import { DataBindingComponent } from './forms/data-binding/data-binding.componen
 import { DemoPipesComponent } from './pages/demo-pipes/demo-pipes.component';
 import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 import { FlyingHeroesPipe } from './pipes/flying-heroes.pipe';
-
+import { DeviceDetectorModule } from 'ngx-device-detector';
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'employees', component: EmployeesPageComponent },
@@ -27,7 +27,7 @@ const appRoutes: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
 ];
-
+// module code goes here
 @NgModule({
   imports: [
     CommonModule,
@@ -36,7 +36,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       // { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    DeviceDetectorModule.forRoot()
   ],
   declarations: [
     CustomPipesComponent,
