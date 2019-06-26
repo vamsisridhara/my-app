@@ -14,7 +14,9 @@ export class CustomPipesComponent implements OnInit {
   canFly = true;
 
   get format() { return this.toggle ? 'shortDate' : 'fullDate'; }
-  toggleFormat() { this.toggle = !this.toggle; }
+  toggleFormat() {
+    this.toggle = !this.toggle;
+  }
   constructor() { this.reset(); }
 
   addHero(name: string) {

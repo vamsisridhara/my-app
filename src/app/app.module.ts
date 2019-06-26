@@ -4,24 +4,12 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-// import { EmployeeRoutingModule } from './routing/employee-routing/employee-routing.module';
-import { from } from 'rxjs';
-// import { ProductRoutingModule } from './routing/product-routing/product-routing.module';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ProductRoutingModule } from './routing/product-routing/product-routing.module';
 import { EmployeeRoutingModule } from './routing/employee-routing/employee-routing.module';
-// import { CustomPipesComponent } from './components/custom-pipes/custom-pipes.component';
-// import { DemoPipesComponent } from './pages/demo-pipes/demo-pipes.component';
-// import { DataBindingComponent } from './forms/data-binding/data-binding.component';
-// import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
-
 @NgModule({
   declarations: [
     AppComponent,
-    // CustomPipesComponent,
-    // DemoPipesComponent,
-    // DataBindingComponent,
-    // ReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +17,19 @@ import { EmployeeRoutingModule } from './routing/employee-routing/employee-routi
     RouterModule,
     AppRoutingModule,
     EmployeeRoutingModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    [
+      SweetAlert2Module.forRoot({
+        buttonsStyling: false,
+        customClass: 'modal-content',
+        confirmButtonClass: 'btn btn-primary',
+        cancelButtonClass: 'btn'
+      })
+    ]
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

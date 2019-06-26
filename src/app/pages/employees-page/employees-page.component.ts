@@ -25,6 +25,9 @@ export class EmployeesPageComponent implements OnInit , OnDestroy {
       }
     });
   }
+  catchEvent(employee) {
+    console.log(JSON.stringify(employee));
+  }
   ngOnDestroy() {
     if (this.employee$) {
       this.employee$.unsubscribe();

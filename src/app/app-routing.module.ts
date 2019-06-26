@@ -12,6 +12,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { NotfoundPageComponent } from './pages/notfound-page/notfound-page.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { DataBindingComponent } from './forms/data-binding/data-binding.component';
+import { MessageComponent } from './components/message/message.component';
+import { ReceiveMessageComponent } from './components/receive-message/receive-message.component';
+import { SendRecieveMessageComponent } from './pages/send-recieve-message/send-recieve-message.component';
 import { DemoPipesComponent } from './pages/demo-pipes/demo-pipes.component';
 import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 import { FlyingHeroesPipe } from './pipes/flying-heroes.pipe';
@@ -24,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'reactive-forms', component: ReactiveFormsComponent },
   { path: 'data-binding', component: DataBindingComponent },
   { path: 'demo-pipes', component: DemoPipesComponent },
+  { path: 'send-recieve', component: SendRecieveMessageComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
 ];
@@ -52,7 +56,10 @@ const appRoutes: Routes = [
     NotfoundPageComponent,
     DemoPipesComponent,
     ExponentialStrengthPipe,
-    FlyingHeroesPipe
+    FlyingHeroesPipe,
+    MessageComponent,
+    ReceiveMessageComponent,
+    SendRecieveMessageComponent,
   ]
 })
 export class AppRoutingModule {

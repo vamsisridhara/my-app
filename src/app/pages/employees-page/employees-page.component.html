@@ -1,3 +1,4 @@
 <app-employee
   [employees]="this.employees"
+  (emitEmployee)="catchEvent($event)"
 ></app-employee>

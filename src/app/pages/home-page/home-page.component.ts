@@ -6,7 +6,7 @@ import { DeviceDetectorService } from 'ngx-device-detector';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-deviceInfo = null;
+  deviceInfo = null;
   constructor(private deviceService: DeviceDetectorService) { }
 
   ngOnInit() {

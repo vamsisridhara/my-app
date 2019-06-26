@@ -1,34 +1,47 @@
 <div class="container" *ngIf="employees?.length">
   <div class="container-fluid">
-    <table class="table table-bordered">
-      <tr>
-        <th>
-          Employee Id
-        </th>
-        <th>
-          Employee Name
-        </th>
-        <th>
-          Salary
-        </th>
-        <th>
-          Age
-        </th>
-      </tr>
-      <tr *ngFor="let e of employees">
-        <td>
-          {{ e.id }}
-        </td>
-        <td>
-          {{ e.employee_name }}
-        </td>
-        <td>
-          {{ e.employee_salary }}
-        </td>
-        <td>
-          {{ e.employee_age }}
-        </td>
-      </tr>
-    </table>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-8">
+          <table class="table table-bordered">
+            <tr>
+              <th>
+                Employee Id
+              </th>
+              <th>
+                Employee Name
+              </th>
+              <th>
+                Salary
+              </th>
+              <th>
+                Age
+              </th>
+              <th>
+                Event 
+              </th>
+            </tr>
+            <tr *ngFor="let e of employees">
+              <td>
+                {{ e.id }}
+              </td>
+              <td>
+                {{ e.employee_name }}
+              </td>
+              <td>
+                {{ e.employee_salary }}
+              </td>
+              <td>
+                {{ e.employee_age }}
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary" 
+                  id="btn_{{e.id}}" (click)="raiseBtn(e)">Click</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
