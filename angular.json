@@ -80,6 +80,22 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "fr": {
+              "aot": true,
+              "outputPath": "dist/my-app-fr/",
+              "i18nFile": "i18n/locale/my-app.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "i18nMissingTranslation": "error"
+            },
+            "en": {
+              "aot": true,
+              "outputPath": "dist/my-app-en/",
+              "i18nFile": "i18n/locale/my-app.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -91,6 +107,12 @@
           "configurations": {
             "production": {
               "browserTarget": "my-app:build:production"
+            },
+            "fr": {
+              "browserTarget": "my-app:build:fr"
+            },
+            "en": {
+              "browserTarget": "my-app:build:en"
             }
           }
         },
