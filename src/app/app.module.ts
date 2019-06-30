@@ -5,9 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { UserMasterComponent } from './unit-testing/user-master/user-master.component';
+import { UserComponent } from './unit-testing/user/user.component';
+import { UserAsyncComponent } from './unit-testing/user-async/user-async.component';
+import { ReversePipe } from './pipes/reverse.pipe';
 @NgModule({
   declarations: [
     AppComponent,
+    UserMasterComponent,
+    UserComponent,
+    UserAsyncComponent,
+    ReversePipe,
   ],
   imports: [
     BrowserModule,

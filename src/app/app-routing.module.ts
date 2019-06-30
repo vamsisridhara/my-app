@@ -1,3 +1,4 @@
+import { QuotesComponent } from './pages/quotes/quotes.component';
 import { CustomPipesComponent } from './components/custom-pipes/custom-pipes.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { NgModule } from '@angular/core';
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   { path: 'demo-pipes', component: DemoPipesComponent },
   { path: 'send-recieve', component: SendRecieveMessageComponent },
   { path: 'sample-i18n', component: SampleI18nComponent },
+  { path: 'quotes', component: QuotesComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
 ];
@@ -67,7 +69,8 @@ const appRoutes: Routes = [
     MessageComponent,
     ReceiveMessageComponent,
     SendRecieveMessageComponent,
-    SampleI18nComponent
+    SampleI18nComponent,
+    QuotesComponent
   ]
 })
 export class AppRoutingModule {
