@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="introductionHeaderWorld" datatype="html">
         <source>
-    Hello World!
-  </source>
+          Hello World!
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/sample-i18n/sample-i18n.component.html</context>
           <context context-type="linenumber">2</context>

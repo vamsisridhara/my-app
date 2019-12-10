@@ -11,7 +11,7 @@ export class UserComponent implements OnInit {
   user: { name: string };
   isUserLoggedIn = false;
   userDetail;
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.userDetail = this.userService.getUser();

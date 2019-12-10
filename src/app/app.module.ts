@@ -1,6 +1,7 @@
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { UserMasterComponent } from './unit-testing/user-master/user-master.comp
 import { UserComponent } from './unit-testing/user/user.component';
 import { UserAsyncComponent } from './unit-testing/user-async/user-async.component';
 import { ReversePipe } from './pipes/reverse.pipe';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,8 @@ import { ReversePipe } from './pipes/reverse.pipe';
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
     // EmployeeRoutingModule,
     // ProductRoutingModule,
     [

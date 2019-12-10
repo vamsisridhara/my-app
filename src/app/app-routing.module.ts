@@ -1,6 +1,3 @@
-import { QuotesComponent } from './pages/quotes/quotes.component';
-import { CustomPipesComponent } from './components/custom-pipes/custom-pipes.component';
-import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -21,7 +18,10 @@ import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 import { FlyingHeroesPipe } from './pipes/flying-heroes.pipe';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { SampleI18nComponent } from './pages/sample-i18n/sample-i18n.component';
-
+import { QuotesComponent } from './pages/quotes/quotes.component';
+import { CustomPipesComponent } from './components/custom-pipes/custom-pipes.component';
+import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
+import { LoginComponent } from './pages/login/login.component';
 const appRoutes: Routes = [
   {
     path: 'employees',
@@ -36,8 +36,9 @@ const appRoutes: Routes = [
   { path: 'demo-pipes', component: DemoPipesComponent },
   { path: 'send-recieve', component: SendRecieveMessageComponent },
   { path: 'sample-i18n', component: SampleI18nComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'quotes', component: QuotesComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
 ];
 // module code goes here
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
     DeviceDetectorModule.forRoot()
   ],
   declarations: [
+    LoginComponent,
     CustomPipesComponent,
     DataBindingComponent,
     // EmployeeComponent,
