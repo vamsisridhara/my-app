@@ -6,6 +6,7 @@ import {
   AfterViewChecked
 } from '@angular/core';
 import filter from 'lodash/filter';
+import { remove } from 'lodash';
 // tslint:disable-next-line: no-conflicting-lifecycle
 @Component({
   selector: 'app-root',
@@ -17,6 +18,16 @@ export class AppComponent implements OnInit, OnChanges, AfterViewChecked,
   data;
   constructor() {
     console.log('constructor');
+    const array = [1, 2, 3, 4];
+    const evens = remove(array, (n) => {
+      return n % 2 === 0;
+    });
+
+    console.log(array);
+    // => [1, 3]
+
+    console.log(evens);
+    // => [2, 4]
   }
   ngOnInit(): void {
     console.log('ng oninit');

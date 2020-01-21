@@ -1,3 +1,4 @@
+<myapp-myapp-lib></myapp-myapp-lib>
 <div class="container" *ngIf="employees?.length">
   <div class="container-fluid">
     <div class="form-group">
@@ -18,7 +19,7 @@
                 Age
               </th>
               <th>
-                Event 
+                Event
               </th>
             </tr>
             <tr *ngFor="let e of employees">
@@ -35,7 +36,7 @@
                 {{ e.employee_age }}
               </td>
               <td>
-                <button type="button" class="btn btn-primary" 
+                <button type="button" class="btn btn-primary"
                   id="btn_{{e.id}}" (click)="raiseBtn(e)">Click</button>
               </td>
             </tr>

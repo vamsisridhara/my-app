@@ -28,7 +28,6 @@ const appRoutes: Routes = [
     loadChildren: () => import('./components/employee/employee.module').then(x => x.EmployeeModule)
   },
   { path: 'home', component: HomePageComponent },
-  // { path: 'employees', component: EmployeesPageComponent },
   { path: 'products', component: ProductsPageComponent },
   { path: 'template-driven', component: TemplateDrivenComponent },
   { path: 'reactive-forms', component: ReactiveFormsComponent },

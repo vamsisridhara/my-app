@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  prodURL: 'local - url'
+  prodURL: 'local - url',
+  backendURL: 'https://local.somedomain.com/api/'
 };
 
 /*

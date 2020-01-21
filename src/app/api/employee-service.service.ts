@@ -1,13 +1,11 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { ApiService } from './api.service';
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private apiService: ApiService) { }
   getEmployees() {
-    return this.http.get(`http://dummy.restapiexample.com/api/v1/employees`);
+    return this.apiService.get(`http://dummy.restapiexample.com/api/v1/employees`);
   }
 }

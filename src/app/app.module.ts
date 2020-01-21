@@ -7,10 +7,11 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { UserMasterComponent } from './unit-testing/user-master/user-master.component';
-import { UserComponent } from './unit-testing/user/user.component';
 import { UserAsyncComponent } from './unit-testing/user-async/user-async.component';
+import { UserComponent } from './unit-testing/user/user.component';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { MatCardModule } from '@angular/material/card';
+// import { MyappLibModule } from 'projects/myapp-lib/src/public-api';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
+    // MyappLibModule,
     // EmployeeRoutingModule,
     // ProductRoutingModule,
     [
@@ -37,9 +39,13 @@ import { MatCardModule } from '@angular/material/card';
       })
     ]
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [
     AppComponent
+  ],
+  entryComponents: [
+
   ]
 })
 export class AppModule { }

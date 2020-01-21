@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  prodURL: 'qa - url'
+  prodURL: 'qa - url',
+  backendURL: 'https://qa.somedomain.com/api/'
 };
 
 /*

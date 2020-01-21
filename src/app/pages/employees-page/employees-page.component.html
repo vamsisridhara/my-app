@@ -1,4 +1,6 @@
-<app-employee
-  [employees]="this.employees"
-  (emitEmployee)="catchEvent($event)"
-></app-employee>
+<div *ngIf="this.employees?.length > 0">
+  <app-employee
+    [employees]="this.employees"
+    (emitEmployee)="catchEvent($event)"
+  ></app-employee>
+</div>

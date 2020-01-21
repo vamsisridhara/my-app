@@ -3,9 +3,15 @@ import { MyappLibComponent } from './myapp-lib.component';
 import { BarChartWidgetComponent } from './bar-chart-widget/bar-chart-widget.component';
 
 @NgModule({
-  declarations: [MyappLibComponent, BarChartWidgetComponent],
+  declarations: [
+    MyappLibComponent,
+    BarChartWidgetComponent
+  ],
   imports: [
   ],
-  exports: [MyappLibComponent]
+  exports: [
+    MyappLibComponent,
+    BarChartWidgetComponent
+  ]
 })
 export class MyappLibModule { }

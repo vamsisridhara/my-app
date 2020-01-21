@@ -12,7 +12,7 @@ export class MessageComponent implements OnInit {
 
   sendMessage(): void {
     // send message to subscribers via observable subject
-    this.messageService.sendMessage('Message from Home Component to App Component!');
+    this.messageService.sendMessage('Message from Message Component to recieve message Component!');
   }
 
   clearMessage(): void {

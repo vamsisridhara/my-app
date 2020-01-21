@@ -4,16 +4,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { EmployeeComponent } from './employee.component';
 import { EmployeesPageComponent } from './../../pages/employees-page/employees-page.component';
+import { MyappLibModule } from 'projects/myapp-lib/src/public-api';
 
 @NgModule({
   imports: [
     FormsModule,
     CommonModule,
+    MyappLibModule
   ],
   exports: [
     EmployeeRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MyappLibModule
   ],
   declarations: [
     EmployeesPageComponent,

@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-chart-lib": "ng build my-app-lib --prod --build-optimizer false --output-hashing all",
-    "prodbuild": "ng build --prod --build-optimizer false --output-hashing all && gzipper -v ./dist",
+    "prodbuild": "./build.sh production",
+    "qabuild": "./build.sh qa",
     "read-xml": "node readxml.js",
     "run-fr": "ng serve --configuration=fr",
     "run-en": "ng serve --configuration=en",
@@ -50,7 +51,8 @@
     "xml-js": "^1.6.11",
     "xml2js": "~0.4.22",
     "xmldom": "latest",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "ngx-take-until-destroy": "~5.4.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.0",
