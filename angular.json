@@ -10,6 +10,9 @@
             "styleext": "scss"
         }
       },
+      "cli": {
+        "packageManager": "yarn"
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
