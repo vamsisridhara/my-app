@@ -4,22 +4,10 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-app": {
-      "i18n": {
-        "locales": {
-          "fr": {
-            "translation": "i18n/locale/my-app.fr.xlf",
-            "baseHref": ""
-          },
-          "en": {
-            "translation": "i18n/locale/my-app.en.xlf",
-            "baseHref": ""
-          }
-        }
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-            "styleext": "scss"
+          "styleext": "scss"
         }
       },
       "cli": {
@@ -70,7 +58,7 @@
                   "maximumError": "5mb"
                 },
                 {
-                  "type": "anyComponentStyle",
+                  "type": "any",
                   "maximumWarning": "6kb"
                 }
               ]
@@ -97,7 +85,7 @@
                   "maximumError": "5mb"
                 },
                 {
-                  "type": "anyComponentStyle",
+                  "type": "any",
                   "maximumWarning": "6kb"
                 }
               ]
@@ -196,13 +184,13 @@
           "options": {
             "tsConfig": "projects/myapp-lib/tsconfig.lib.json",
             "project": "projects/myapp-lib/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "projects/myapp-lib/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
