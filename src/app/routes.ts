@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+
+
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
 // import { EmployeesPageComponent } from './pages/employees-page/employees-page.component';
@@ -22,39 +23,39 @@ import { QuotesComponent } from './pages/quotes/quotes.component';
 import { CustomPipesComponent } from './components/custom-pipes/custom-pipes.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { LoginComponent } from './pages/login/login.component';
-// import * as appRoutes from './routes';
-import { TempRoutingModule } from './routes';
-// module code goes here
+import { Routes, RouterModule } from '@angular/router';
+const appRoutes: Routes = [
+  {
+    path: 'employees',
+    loadChildren: () => import('./components/employee/employee.module').then(x => x.EmployeeModule)
+  },
+  { path: 'home', component: HomePageComponent },
+  { path: 'products', component: ProductsPageComponent },
+  { path: 'template-driven', component: TemplateDrivenComponent },
+  { path: 'reactive-forms', component: ReactiveFormsComponent },
+  { path: 'data-binding', component: DataBindingComponent },
+  { path: 'demo-pipes', component: DemoPipesComponent },
+  { path: 'send-recieve', component: SendRecieveMessageComponent },
+  { path: 'sample-i18n', component: SampleI18nComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'quotes', component: QuotesComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', component: NotfoundPageComponent }
+];
 @NgModule({
   imports: [
-    CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    TempRoutingModule,
-    DeviceDetectorModule.forRoot()
+    RouterModule.forRoot(
+      appRoutes,
+      // { enableTracing: true } // <-- debugging purposes only
+    ),
   ],
-  declarations: [
-    LoginComponent,
-    CustomPipesComponent,
-    DataBindingComponent,
-    // EmployeeComponent,
-    ProductsComponent,
-    HomePageComponent,
-    // EmployeesPageComponent,
-    ProductsPageComponent,
-    TemplateDrivenComponent,
-    ReactiveFormsComponent,
-    NotfoundPageComponent,
-    DemoPipesComponent,
-    ExponentialStrengthPipe,
-    FlyingHeroesPipe,
-    MessageComponent,
-    ReceiveMessageComponent,
-    SendRecieveMessageComponent,
-    SampleI18nComponent,
-    QuotesComponent
+  exports: [
+    RouterModule,
+    // TempRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
-export class AppRoutingModule {
-
-}
+export class TempRoutingModule {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'myapp-bar-chart-widget',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bar-chart-widget.component.sass']
 })
 export class BarChartWidgetComponent implements OnInit {
-
+  @Input() chartvm;
   constructor() { }
 
   ngOnInit() {

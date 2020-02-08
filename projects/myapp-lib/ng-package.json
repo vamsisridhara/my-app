@@ -5,8 +5,12 @@
     "entryFile": "src/public-api.ts",
     "externals": {
       "chart.js": "chart.js",
+      "chart.piecelabel.js": "chart.piecelabel.js",
+      "chartjs-plugin-piechart-outlabels": "chartjs-plugin-piechart-outlabels",
+      "lodash-decorators": "lodash-decorators",
       "lodash": "lodash",
       "rxjs": "rxjs",
+      "moment": "moment",
       "ng2-charts": "ng2-charts",
       "rxjs-compat": "rxjs-compat"
     }
